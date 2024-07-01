@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Random Number" />
+    <meta property="og:description" content="자신있으면 맞춰봐!" />
+    <meta property="og:image" content="image/scary.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>숫자 맞추기 게임</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="secondContainer">
+        <h1>숫자 맞추기 게임</h1>
+        <p>3번 안에 맞춰봐</p>
+        <p>
+          그럼 <span class="bloody">죽음의 게임</span>에 오신 것을 환영합니다.
+        </p>
+        <img
+          src="https://media1.giphy.com/media/9DinPR8bzFsmf74j9W/giphy.gif"
+          class="main-img"
+          id="changeImg"
+        />
+        <p id="result">도전해봐~🙌</p>
+        <div id="chance">남은기회 : 3</div>
+        <div class="inputArea">
+          <input
+            id="inputNumber"
+            type="number"
+            placeholder="1부터 50까지 숫자를 입력하세요."
+          />
+          <button id="startButton">입력!</button>
+          <button id="resetButton">RESET!</button>
+        </div>
+        <div id="inputHistory">입력한 숫자들:</div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+*{
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("image/scary.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+  height: 1000px;
+  background-position: 40%;
+  font-family: 'Black Han Sans', sans-serif;
+  letter-spacing: 5px;
+  color: #fff;
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#secondContainer{
+  width: 50%;
+  border: 10px solid black;
+  background-color: rgba(247, 243, 242, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+h1{
+  color: red;
+  margin-top: 50px;
+  font-size: 100px;
+  padding: 20px;
+}
+
+p{
+  padding: 20px;
+  font-size: 40px;
+}
+
+@keyframes drip {
+  0% {
+      text-shadow: 0 0 2px red, 0 0 5px red, 0 0 10px red, 0 0 15px red;
+  }
+  25% {
+      text-shadow: 0 2px 2px red, 0 5px 5px red, 0 10px 10px red, 0 15px 15px red;
+  }
+  50% {
+      text-shadow: 0 5px 2px red, 0 10px 5px red, 0 15px 10px red, 0 20px 15px red;
+  }
+  75% {
+      text-shadow: 0 10px 2px red, 0 15px 5px red, 0 20px 10px red, 0 25px 15px red;
+  }
+  100% {
+      text-shadow: 0 15px 2px red, 0 20px 5px red, 0 25px 10px red, 0 30px 15px red;
+  }
+}
+
+.bloody {
+  color: white;
+  font-size: 50px;
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  animation: drip 2s infinite;
+  transition: text-shadow 0.2s ease-in-out;
+}
+
+img{
+  width: 40%;
+  height: 200px;
+  margin-top: 20px;
+}
+
+#chance{
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.inputArea{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@keyframes flicker {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+@keyframes shadowPulse {
+  0% {
+      box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
+  }
+  50% {
+      box-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red, 0 0 20px red;
+  }
+  100% {
+      box-shadow: 0 0 10px red, 0 0 20px red, 0 0 30px red, 0 0 40px red;
+  }
+}
+
+#inputNumber {
+  width: 400px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 20px;
+  background-color: black;
+  color: red;
+  font-size: 20px;
+  text-align: center;
+  border: 2px solid red;
+  font-family: 'Creepster', cursive; 
+  animation: flicker 1.5s infinite, shadowPulse 2s infinite;
+}
+
+#startButton {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid darkred;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  background-color: black;
+  font-family: 'Creepster', cursive;
+  animation: flicker 1.5s infinite, shadowPulse 2s infinite;
+  cursor: pointer;
+}
+
+#resetButton {
+  width: 100px;
+  height: 50px;
+  margin: 10px 0px;
+  border-radius: 20px;
+  border: 2px solid darkred;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: black;
+  font-family: 'Creepster', cursive;
+  animation: flicker 1.5s infinite, shadowPulse 2s infinite;
+  cursor: pointer;
+}
+
+#inputHistory {
+  font-size: 20px;
+  color: white;
+  margin-top: 20px;
+  display: none; /* 처음에는 숨김 */
+}
+
+
+@media screen and (min-width:768px) and (max-width:1023px){
+  h1{
+      margin-top: 30px;
+      font-size: 40px;
+      padding: 20px;
+  }
+
+  #secondContainer{
+      width: 70%;
+  }
+}
+
+@media screen and (max-width:767px) {
+  h1{
+      margin-top: 10px;
+      font-size: 30px;
+      padding: 20px;
+  }
+
+  #secondContainer{
+      width: 95%;
+  }
+
+  p{
+      padding: 10px;
+      font-size: 20px;
+      color: white
+  }
+
+  span{
+      font-size: 40px;
+  }
+
+  #inputNumber{
+      width: 180px;
+      margin-right: 10px;
+      font-size: 11px;
+  }
+
+  #startButton{
+      width: 45px;
+      height: 45px;
+
+      font-size: 15px;
+  }
+
+  #resetButton{
+      width: 70px;
+      height: 50px;
+  
+      font-size: 15px;
+  }
+  
+  #chance{
+      font-size: 20px;
+  }
+
+  #inputHistory {
+    font-size: 15px;
+  }
+}
