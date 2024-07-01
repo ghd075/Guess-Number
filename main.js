@@ -13,6 +13,7 @@ let inputNum = document.getElementById("inputNumber");
 let startBtn = document.getElementById("startButton");
 let result = document.getElementById("result");
 let resetBtn = document.getElementById("resetButton");
+let answerBtn = document.getElementById("answerButton");
 let chanceArea = document.getElementById("chance");
 let inputHistory = document.getElementById("inputHistory");
 let chance = 3;
@@ -24,10 +25,11 @@ startBtn.style.cursor="pointer";
 
 function computerNum(){
     randomNumber = Math.floor(Math.random() * 50) + 1;    // 범위를 1 ~ 50으로 수정
-    console.log(randomNumber);
+    console.log(`정답, ${randomNumber}`);
 }
 
 startBtn.addEventListener("click", start);
+answerBtn.addEventListener("click", checkAnswer);
 resetBtn.addEventListener("click", reset);
 
 // input 창에 포커스를 두면 바로 그전에 입력한 값이 지워지기
@@ -103,5 +105,14 @@ function reset(){
     result.textContent = "도전해봐~🙌";
     change.src="https://media1.giphy.com/media/9DinPR8bzFsmf74j9W/giphy.gif";
 };
+
+function checkAnswer() {
+  if (answerBtn.textContent === "Answer") {
+    // 버튼의 텍스트가 Answer 인 경우
+    answerBtn.textContent = `${randomNumber}`;
+  } else {
+    answerBtn.textContent = "Answer";
+  }
+}
 
 computerNum();

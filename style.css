@@ -144,6 +144,21 @@ img{
 #resetButton {
   width: 100px;
   height: 50px;
+  margin-right: 10px;
+  border-radius: 20px;
+  border: 2px solid darkred;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: black;
+  font-family: 'Creepster', cursive;
+  animation: flicker 1.5s infinite, shadowPulse 2s infinite;
+  cursor: pointer;
+}
+
+#answerButton {
+  width: 100px;
+  height: 50px;
   margin: 10px 0px;
   border-radius: 20px;
   border: 2px solid darkred;
@@ -206,16 +221,20 @@ img{
   #startButton{
       width: 45px;
       height: 45px;
-
       font-size: 15px;
   }
 
   #resetButton{
       width: 70px;
       height: 50px;
-  
       font-size: 15px;
   }
+
+  #answerButton{
+    width: 70px;
+    height: 50px;
+    font-size: 15px;
+}
   
   #chance{
       font-size: 20px;
